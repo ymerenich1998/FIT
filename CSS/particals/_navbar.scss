@@ -1,0 +1,119 @@
+.navbar{
+  height: 100px;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background-color: rgba($color-white, .2);
+  backdrop-filter: blur(100px);
+
+  &_logo{
+    font-weight: 700;
+    line-height: 24px;
+    color: #00486D;
+
+    img{
+      width: 75px;
+      height: 75px;
+    }
+
+    &_text{
+      display: inline-block;
+      max-width: 150px;
+      margin-left: 10px;
+      
+    }
+  }
+
+  &_menu{
+
+    &_link{
+      position: relative;
+      font-weight: $font-weight-medium;
+      margin: 0px 20px;
+      &:before{
+        content: "";
+        display: block;
+        width: 60px;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: -8px;
+        background-color: $color-neutral-base;
+        transition: all .3s ease-in-out;
+      }
+      &:hover, &.active{
+        &:before{
+          background-color: $color-primary-base;
+        }
+      }
+    }
+  }
+
+  &-collapse{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgba($color-white, 1);
+    padding: 20px;
+    @media (min-width: $breakpoint-xl) {
+      position: static;
+      padding: auto;
+      background-color: transparent;
+    }
+  }
+
+  // togler
+  &-toggler {
+    // position: absolute;
+    // top:33px;
+    // right:10px;
+    border: none;
+    background: transparent !important;
+
+    .icon-bar {
+      width: 22px;
+      height: 2px;
+      background-color: #000;
+      display: block;
+      transition: all 0.2s;
+      margin-top: 4px
+    }
+
+    &:focus{
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
+
+    .top-bar {
+      transform: rotate(45deg);
+      transform-origin: 10% 10%;
+    }
+
+    .middle-bar {
+      opacity: 0;
+    }
+
+    .bottom-bar {
+      transform: rotate(-45deg);
+      transform-origin: 10% 90%;
+    }
+
+    &.collapsed .top-bar {
+      transform: rotate(0);
+    }
+
+    &.collapsed .middle-bar {
+      opacity: 1;
+    }
+
+    &.collapsed .bottom-bar {
+      transform: rotate(0);
+    }
+
+  }
+}

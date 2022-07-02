@@ -1,0 +1,42 @@
+.footer{
+  color: $color-primary-light;
+  position: relative;
+  
+  &_main{
+    background-color: $color-primary-base;
+  }
+
+  &_right{
+    background-color: $color-primary-dark;
+    padding: 10px;
+  }
+
+  &_link{
+    color: $color-primary-light;
+    line-height: 185%;
+    &:hover{
+      color: $color-white;
+    }
+    &__width{
+      display: block;
+      max-width: 350px;
+      font-size: $font-size-xs;
+    }
+  }
+
+  &_map{
+    max-height: 400px;
+    background-color: $color-background-base;
+    @media screen and (min-width: $breakpoint-lg){
+      iframe{
+        position: relative;
+        top: -55px;
+        left: -85px;
+      }
+    }
+  }
+
+  &_title{
+    margin-bottom: 30px;
+  }
+}

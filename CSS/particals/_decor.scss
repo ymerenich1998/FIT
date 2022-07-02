@@ -1,0 +1,54 @@
+.decor{
+  position: absolute;
+  width: 208px;
+  height: 208px;
+  &_header_top{
+    top: -155px;
+    left: -35px;
+  }
+  &_header_bottom{
+    bottom: -110px;
+    left: -140px;
+  }
+  &_about{
+    z-index: 0;
+    &__right{
+      right: -55px;
+      top: 60px;
+    }
+    &__left{
+      left: -55px;
+      bottom: 0px;
+    }
+  }
+
+  &_footer{
+    &__left{
+      top: -104px;
+    }
+  }
+
+  &_solid{
+    @media (min-width: $breakpoint-xl){
+      width: 50px;
+    }
+    @media (min-width: 1500px){
+      width: 100px;
+    }
+    @media (min-width: 1620px){
+      width: 150px;
+    }
+    height: 300px;
+    background-color: $color-primary-base;
+
+
+      
+    &__left{
+      top: -150px;
+    }
+    &__right{
+      bottom: -150px;
+      right: 0;
+    }
+  }
+}

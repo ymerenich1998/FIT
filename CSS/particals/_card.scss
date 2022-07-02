@@ -1,0 +1,63 @@
+.specialtyCard{
+  width: 290px;
+  height: 440px;
+  padding: 30px 30px 40px;
+  border-radius: $border-radius-card;
+  box-shadow: 0px 24px 24px rgba(0, 72, 109, 0.2);
+  margin: 0px 15px 40px;
+  @media (min-width: $breakpoint-lg) {
+    width: 325px;
+    margin: 0px 20px 40px;
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    width: 400px;
+    margin: 0px 25px 40px;
+  }
+
+  &_icon{
+    svg{
+      width: 64px;
+      height: 64px;
+      margin-bottom: 20px;
+
+      path{
+        fill: $color-primary-base;
+      }
+    }
+  }
+
+  &_title{
+    height: 66px;
+  }
+
+  &_text{
+    height: 145px;
+    font-size: $font-size-xs;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    @media (min-width: $breakpoint-xl) {
+      line-height: 1.8;
+      margin-bottom: 40px;
+    }
+  }
+
+  &_more{
+    cursor: pointer;
+    &:after{
+      content: '';
+      display: inline-block;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='14' viewBox='0 0 22 14' fill='none'%3E%3Cg clip-path='url(%23clip0_4704_5312)'%3E%3Cpath d='M14.681 1.34314L21.2081 6.99999L14.681 12.6569' stroke='%2300486D' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M20.8122 7H1.23074' stroke='%2300486D' stroke-linecap='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_4704_5312'%3E%3Crect width='21.9231' height='14' fill='white' transform='translate(0.0769043)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+      width: 22px;
+      height: 14px;
+      background-size: contain;
+      margin-left: 10px;
+      margin-bottom: -2px;
+    }
+  }
+
+}
+
+.splide__list{
+  margin: 0 auto!important;
+}

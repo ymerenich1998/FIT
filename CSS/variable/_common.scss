@@ -1,0 +1,19 @@
+html{
+  font-size: $fs-base-mobile;
+  @media screen and (min-width: $breakpoint-lg){
+    font-size: $fs-base;
+  }
+}
+
+body{
+  font-family: $font;
+  color: $color-primary-base;
+}
+
+a{
+  color: $color-primary-base;
+  text-decoration: none;
+  &:hover{
+    color: $color-primary-base;
+  }
+}

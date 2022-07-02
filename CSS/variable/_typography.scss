@@ -1,0 +1,38 @@
+@mixin make-heading($desktop, $tablet, $mobile, $line-height, $font-weight: 700) {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-family: $font;
+  font-weight: #{$font-weight};
+  font-size: #{$mobile};
+  line-height: #{$line-height};
+	@media (min-width: $breakpoint-md) {
+		font-size: #{$tablet};
+	}
+  @media (min-width: $breakpoint-xl) {
+    font-size: #{$desktop};
+  }
+}
+
+h1, .h1 {
+  @include make-heading($font-size-xxxl, $font-size-xxl, $font-size-xl, $line-height-base, $font-weight-bold);
+}
+h2, .h2 {
+  @include make-heading($font-size-xxl, $font-size-xl, $font-size-l, $line-height-base, $font-weight-bold);
+}
+h3, .h3 {
+  @include make-heading($font-size-xxl, $font-size-xl, $font-size-l, $line-height-sm, $font-weight-bold);
+}
+h4, .h4 {
+  @include make-heading($font-size-m, $font-size-sm, $font-size-sm, $line-height-sm, $font-weight-medium);
+}
+h5, .h5 {
+  @include make-heading($font-size-m, $font-size-m, $font-size-xs, $line-height-sm, $font-weight-bold);
+}
+h6, .h6 {
+  @include make-heading($font-size-sm, $font-size-sm, $font-size-base, $line-height-sm, $font-weight-bold);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}

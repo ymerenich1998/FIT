@@ -1,0 +1,30 @@
+.header{
+  min-height: 750px;
+  background-color: $color-background-base;
+  margin-bottom: 160px;
+  position: relative;
+  &_img{
+    position: relative;
+    height: 100%;
+    background-color: $color-primary-base;
+    &_photo{
+      width: 100%;
+      z-index: 1;
+      filter: drop-shadow(0px 32px 24px rgba(0, 72, 109, 0.5));
+      @media (min-width: $breakpoint-lg) {
+        position: relative;
+        top: 55px;
+        right: 85px;
+        height: 750px;
+      }
+    }
+  }
+  &_title{
+    margin-bottom: 25px;
+  }
+  &_text{
+    margin-bottom: 35px;
+    font-size: $font-size-m;
+    line-height: 175%;
+  }
+}

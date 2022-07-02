@@ -1,0 +1,23 @@
+.btn{
+  padding: 12px 38px;
+  
+  border-radius: $border-radius-button;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  border-color: transparent;
+  &:hover{
+    background-color: $color-primary-dark;
+    color: $color-white;
+    border-color: transparent;
+  }
+
+  &__solid{
+    background-color: $color-primary-base;
+    color: $color-white;
+  }
+
+  &__outline{
+    border: 1px solid $color-primary-base;
+    color: $color-primary-base;
+  }
+}
