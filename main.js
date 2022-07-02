@@ -48,6 +48,6 @@ document.addEventListener( 'DOMContentLoaded', function() {
     modalTitle.textContent = specialtys[specialityName].name;
     modalBodyInput.innerHTML = specialtys[specialityName].desc;
 
-})
+  })
 
 } );
