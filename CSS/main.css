@@ -350,8 +350,7 @@ a:hover {
 
 .layouts {
   margin-bottom: 160px;
-  position: relative;
-  /* важно - для того, чтобы псевдоэлемент позиционировался относительно этого элемента */
+  position: relative; /* важно - для того, чтобы псевдоэлемент позиционировался относительно этого элемента */
   border-top: 100px solid transparent;
   margin-top: -100px;
   -moz-background-clip: padding;
